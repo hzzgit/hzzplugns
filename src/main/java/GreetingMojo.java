@@ -16,7 +16,6 @@ import java.util.Properties;
 @Mojo( name = "sayhi")
 public class GreetingMojo extends AbstractMojo
 {
-
     /**
      * path of the classes folder.
      * @parameter expression="${classFolderPath}"
