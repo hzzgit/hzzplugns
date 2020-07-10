@@ -3,6 +3,8 @@ import org.apache.maven.model.io.xpp3.MavenXpp3Reader;
 import org.apache.maven.plugin.AbstractMojo;
 import org.apache.maven.plugin.MojoExecutionException;
 import org.apache.maven.plugins.annotations.Mojo;
+import org.apache.maven.plugins.annotations.Parameter;
+import org.apache.maven.project.MavenProject;
 import org.codehaus.plexus.util.xml.pull.XmlPullParserException;
 
 import java.io.*;
@@ -25,7 +27,22 @@ public class GreetingMojo extends AbstractMojo
      * @parameter expression = "${application}"
      */
     private String application;
-
+    @Parameter(
+            defaultValue = "${project.build.directory}",
+            required = true
+    )
+    private File outputDirectory;
+    @Parameter(
+            defaultValue = "${project.build.finalName}",
+            readonly = true
+    )
+    private String finalName;
+    @Parameter(
+            defaultValue = "${project}",
+            readonly = true,
+            required = true
+    )
+    private MavenProject project;
 
     private String filePath;
     private String targetpath;
