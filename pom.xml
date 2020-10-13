@@ -7,6 +7,7 @@
     <groupId>com.hzz</groupId>
     <artifactId>hzzz-deploy</artifactId>
     <version>3.5-SNAPSHOT</version>
+<!--        <version>3.6-RELEASE</version>-->
     <packaging>maven-plugin</packaging>
 
     <properties>
@@ -50,4 +51,44 @@
             <scope>provided</scope>
         </dependency>
     </dependencies>
+
+
+    <distributionManagement>
+        <repository>
+            <id>nexus</id>
+            <url>http://125.77.23.196:8081/repository/maven-releases/</url>
+        </repository>
+        <snapshotRepository>
+            <id>nexus</id>
+            <url>http://125.77.23.196:8081/repository/maven-snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
+    <pluginRepositories>
+        <pluginRepository>
+            <id>nexus</id>
+            <name>Nexus Repository</name>
+            <url>http://125.77.23.196:8081/repository/maven-public/</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </pluginRepository>
+    </pluginRepositories>
+
+    <repositories>
+        <repository>
+            <id>nexus</id>
+            <name>Nexus Repository</name>
+            <url>http://125.77.23.196:8081/repository/maven-public/</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
+
 </project>
