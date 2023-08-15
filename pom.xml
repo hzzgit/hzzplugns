@@ -13,7 +13,7 @@
     <properties>
         <mavenFileManagementVersion>3.0.0</mavenFileManagementVersion>
         <mavenArchiverVersion>3.5.0</mavenArchiverVersion>
-        <mavenVersion>3.0</mavenVersion>
+        <mavenVersion>3.8.1</mavenVersion>
         <javaVersion>8</javaVersion>
     </properties>
 
